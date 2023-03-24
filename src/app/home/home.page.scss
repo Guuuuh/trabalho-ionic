@@ -25,3 +25,24 @@
 #container a {
   text-decoration: none;
 }
+
+.icon-header {
+  font-size: 22px;
+  padding: 10px;
+}
+
+.background-header {
+  --background: rgba(128, 0, 0);
+  color: whitesmoke;
+}
+
+.row-menu {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+}
+.buttons-menu {
+  border-radius: 50%;
+  border: 1px solid black;
+}
