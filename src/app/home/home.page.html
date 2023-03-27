@@ -8,8 +8,8 @@
   </ion-toolbar>
 
   <ion-row>
-    <ion-slides class="slides">
-      <ion-slide *ngFor="let categoria of categorias; let ix = index;">
+    <ion-slides class="slides" [options]="slideOpts">
+      <ion-slide *ngFor="let categoria of categorias; let ix = index;" (click)="trocaAba(categoria)">
         {{categoria.nome}}
       </ion-slide>
     </ion-slides>
@@ -17,13 +17,35 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-grid>
+  <ion-grid *ngIf="aba == 1">
     <ion-row>
       <ion-col size="12" *ngFor="let pizza of pizzas; let ix= index;">
         <ion-card>
-          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+          <img src="{{pathImgs + pizza.img}}" />
           <ion-card-header>
             <ion-card-title>{{pizza.titulo}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{pizza.descricao}}
+          </ion-card-content>
+          <ion-card-content>
+            {{pizza.valor}}
+          </ion-card-content>
+          <ion-card-content>
+            <ion-button>Detalhes</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf=" aba == 2">
+    <ion-row>
+      <ion-col size="12" *ngFor="let burguer of burguers; let ix= index;">
+        <ion-card>
+          <img src="{{pathImgs + burguer.img}}" />
+          <ion-card-header>
+            <ion-card-title>{{burguer.titulo}}</ion-card-title>
             <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
           </ion-card-header>
         
@@ -34,4 +56,58 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+
+  <ion-grid *ngIf=" aba == 3">
+    <ion-row>
+      <ion-col size="12" *ngFor="let salgado of salgados; let ix= index;">
+        <ion-card>
+          <img src="{{pathImgs + salgado.img}}" />
+          <ion-card-header>
+            <ion-card-title>{{salgado.titulo}}</ion-card-title>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf=" aba == 4">
+    <ion-row>
+      <ion-col size="12" *ngFor="let lanche of cachorrao; let ix= index;">
+        <ion-card>
+          <img src="{{pathImgs + lanche.img}}" />
+          <ion-card-header>
+            <ion-card-title>{{lanche.titulo}}</ion-card-title>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid *ngIf=" aba == 5">
+    <ion-row>
+      <ion-col size="12" *ngFor="let suco of sucos; let ix= index;">
+        <ion-card>
+          <img src="{{pathImgs + suco.img}}" />
+          <ion-card-header>
+            <ion-card-title>{{suco.titulo}}</ion-card-title>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
