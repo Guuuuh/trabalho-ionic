@@ -32,7 +32,7 @@
 }
 
 .background-header {
-  --background: rgba(128, 0, 0);
+  --background: rgb(13, 13, 173);
   color: whitesmoke;
 }
 
@@ -45,4 +45,10 @@
 .buttons-menu {
   border-radius: 50%;
   border: 1px solid black;
+}
+
+.slides{
+  padding: 20px;
+  background-color: #a467d6;
+  color: white;
 }
