@@ -33,7 +33,7 @@
             {{pizza.valor}}
           </ion-card-content>
           <ion-card-content>
-            <ion-button (click)="trocaPagina()">Detalhes</ion-button>
+            <ion-button (click)="trocaPaginaPizza(pizza)">Detalhes</ion-button>
           </ion-card-content>
 
         </ion-card>
@@ -58,7 +58,7 @@
             {{burguer.valor}}
           </ion-card-content>
           <ion-card-content>
-            <ion-button>DETALHES</ion-button>
+            <ion-button (click)="trocaPaginaBurguer(burguer)">Detalhes</ion-button>
           </ion-card-content>
 
         </ion-card>
@@ -82,7 +82,7 @@
             {{salgado.valor}}
           </ion-card-content>
           <ion-card-content>
-            <ion-button>DETALHES</ion-button>
+            <ion-button (click)="trocaPaginaSalgado(salgado)">Detalhes</ion-button>
           </ion-card-content>
 
         </ion-card>
@@ -92,7 +92,7 @@
 
   <ion-grid *ngIf=" aba == 4">
     <ion-row>
-      <ion-col size="12" *ngFor="let lanche of cachorrao; let ix= index;">
+      <ion-col size="12" *ngFor="let lanche of lanches; let ix= index;">
         <ion-card>
 
           <img src="{{pathImgs + lanche.img}}" />
@@ -107,7 +107,7 @@
             {{lanche.valor}}
           </ion-card-content>
           <ion-card-content>
-            <ion-button>DETALHES</ion-button>
+            <ion-button (click)="trocaPaginaLanche(lanche)">Detalhes</ion-button>
           </ion-card-content>
 
         </ion-card>
@@ -128,7 +128,7 @@
             {{suco.valor}}
           </ion-card-content>
           <ion-card-content>
-            <ion-button>DETALHES</ion-button>
+            <ion-button (click)="trocaPaginaSuco(suco)">Detalhes</ion-button>
           </ion-card-content>
 
         </ion-card>

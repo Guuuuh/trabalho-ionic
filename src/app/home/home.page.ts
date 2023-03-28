@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +22,7 @@ export class HomePage {
   
   public pizzas = [
 
-    {titulo: "4 queijos", descricao: "Uma pizza deliciosa com quatro tipos de queijos diferentes.", valor: "50,00 Reais", img: "4queijos.jpg"},
+    {titulo: "4 Queijos", descricao: "Uma pizza deliciosa com quatro tipos de queijos diferentes.", valor: "50,00 Reais", img: "4queijos.jpg"},
     {titulo: "Marguerita", descricao: "Uma pizza feita com o maior requinte culinário da Itália.", valor: "40,00 Reais", img: "marguerita.webp"},
     {titulo: "Frango com Catupiry", descricao: "Uma tradicional mas que cai bem em todas as ocasiões e todo mundo ama.", valor: "55.00 Reais", img: "frango.png"},
 
@@ -29,9 +30,9 @@ export class HomePage {
 
   public burguers = [
 
-    {titulo: "X-burguer", descricao: "Um hamburguer com 150g de carne e queijo para dar sabor.", valor: "40.00 Reais", img: "x-burguer.jpg"},
-    {titulo: "X-bacon", descricao: "Um hamburguer com 150g de carne e queijo e bacon para quem curte.", valor: "50.00 Reais", img: "X-Bacon.jpg"},
-    {titulo: "X-salada", descricao: "Um hamburguer vegano para quem não é adepto à carne bovina.", valor: "45.00 Reais", img: "xsalada.png"}
+    {titulo: "X-Burguer", descricao: "Um hamburguer com 150g de carne e queijo para dar sabor.", valor: "40.00 Reais", img: "x-burguer.jpg"},
+    {titulo: "X-Bacon", descricao: "Um hamburguer com 150g de carne e queijo e bacon para quem curte.", valor: "50.00 Reais", img: "X-Bacon.jpg"},
+    {titulo: "X-Salada", descricao: "Um hamburguer vegano para quem não é adepto à carne bovina.", valor: "45.00 Reais", img: "xsalada.png"}
 
   ]
 
@@ -43,7 +44,7 @@ export class HomePage {
     
   ]
 
-  public cachorrao = [
+  public lanches = [
 
     {titulo: "Simples", descricao: "Um lanche simples para matar a fome no sábado a noite.", valor: "11.00 Reais", img: "cachorrao-simples.jpg"},
     {titulo: "Duplo", descricao: "Um lanche simples para matar a fome por duas pessoas.", valor: "15.00 Reais", img: "cachorrao-duplo.jpg"},
@@ -63,13 +64,40 @@ export class HomePage {
     slidesPerView: 2
   }
 
-  constructor() {}
+  constructor(private navCtrl: NavController) {
+  }
 
   public trocaAba(categoria: any){
     this.aba = categoria.id
   }
 
-  public trocaPagina(){
-    
+  public trocaPaginaPizza(pizza: any) {
+    this.navCtrl.navigateForward('detalhes', {
+      queryParams: { produto: pizza }
+    });
+  }
+
+  public trocaPaginaBurguer(burguer: any) {
+    this.navCtrl.navigateForward('detalhes', {
+      queryParams: { produto: burguer }
+    });
+  }
+
+  public trocaPaginaSalgado(salgado: any) {
+    this.navCtrl.navigateForward('detalhes', {
+      queryParams: { produto: salgado }
+    });
+  }
+
+  public trocaPaginaLanche(lanche: any) {
+    this.navCtrl.navigateForward('detalhes', {
+      queryParams: { produto: lanche }
+    });
+  }
+
+  public trocaPaginaSuco(suco: any) {
+    this.navCtrl.navigateForward('detalhes', {
+      queryParams: { produto: suco }
+    });
   }
 }
