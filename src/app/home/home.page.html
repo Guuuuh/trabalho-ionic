@@ -7,9 +7,9 @@
     <ion-icon slot="end" class="icon-header" name="person-circle-outline"></ion-icon>
   </ion-toolbar>
 
-  <ion-row>
-    <ion-slides class="slides" [options]="slideOpts">
-      <ion-slide *ngFor="let categoria of categorias; let ix = index;" (click)="trocaAba(categoria)">
+  <ion-row class="slides">
+    <ion-slides [options]="slideOpts">
+      <ion-slide class="buttons-menu" *ngFor="let categoria of categorias; let ix = index;" (click)="trocaAba(categoria)">
         {{categoria.nome}}
       </ion-slide>
     </ion-slides>
