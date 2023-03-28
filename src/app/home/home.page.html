@@ -21,6 +21,7 @@
     <ion-row>
       <ion-col size="12" *ngFor="let pizza of pizzas; let ix= index;">
         <ion-card>
+
           <img src="{{pathImgs + pizza.img}}" />
           <ion-card-header>
             <ion-card-title>{{pizza.titulo}}</ion-card-title>
@@ -32,8 +33,9 @@
             {{pizza.valor}}
           </ion-card-content>
           <ion-card-content>
-            <ion-button>Detalhes</ion-button>
+            <ion-button (click)="trocaPagina()">Detalhes</ion-button>
           </ion-card-content>
+
         </ion-card>
       </ion-col>
     </ion-row>
@@ -43,15 +45,22 @@
     <ion-row>
       <ion-col size="12" *ngFor="let burguer of burguers; let ix= index;">
         <ion-card>
+
           <img src="{{pathImgs + burguer.img}}" />
           <ion-card-header>
             <ion-card-title>{{burguer.titulo}}</ion-card-title>
-            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
           </ion-card-header>
         
           <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
+            {{burguer.descricao}}
           </ion-card-content>
+          <ion-card-content>
+            {{burguer.valor}}
+          </ion-card-content>
+          <ion-card-content>
+            <ion-button>DETALHES</ion-button>
+          </ion-card-content>
+
         </ion-card>
       </ion-col>
     </ion-row>
@@ -61,15 +70,21 @@
     <ion-row>
       <ion-col size="12" *ngFor="let salgado of salgados; let ix= index;">
         <ion-card>
+
           <img src="{{pathImgs + salgado.img}}" />
           <ion-card-header>
             <ion-card-title>{{salgado.titulo}}</ion-card-title>
-            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
           </ion-card-header>
-        
           <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
+            {{salgado.descricao}}
           </ion-card-content>
+          <ion-card-content>
+            {{salgado.valor}}
+          </ion-card-content>
+          <ion-card-content>
+            <ion-button>DETALHES</ion-button>
+          </ion-card-content>
+
         </ion-card>
       </ion-col>
     </ion-row>
@@ -79,15 +94,22 @@
     <ion-row>
       <ion-col size="12" *ngFor="let lanche of cachorrao; let ix= index;">
         <ion-card>
+
           <img src="{{pathImgs + lanche.img}}" />
           <ion-card-header>
-            <ion-card-title>{{lanche.titulo}}</ion-card-title>
-            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+            <ion-card-title>{{lanche.titulo}}</ion-card-title> 
           </ion-card-header>
         
           <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
+            {{lanche.descricao}}
           </ion-card-content>
+          <ion-card-content>
+            {{lanche.valor}}
+          </ion-card-content>
+          <ion-card-content>
+            <ion-button>DETALHES</ion-button>
+          </ion-card-content>
+
         </ion-card>
       </ion-col>
     </ion-row>
@@ -96,15 +118,19 @@
     <ion-row>
       <ion-col size="12" *ngFor="let suco of sucos; let ix= index;">
         <ion-card>
+
           <img src="{{pathImgs + suco.img}}" />
           <ion-card-header>
-            <ion-card-title>{{suco.titulo}}</ion-card-title>
-            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+            <ion-card-title>{{suco.titulo}}</ion-card-title>  
           </ion-card-header>
-        
+
           <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
+            {{suco.valor}}
           </ion-card-content>
+          <ion-card-content>
+            <ion-button>DETALHES</ion-button>
+          </ion-card-content>
+
         </ion-card>
       </ion-col>
     </ion-row>
