@@ -21,8 +21,9 @@
     <ion-row>
       <ion-col size="12" *ngFor="let pizza of pizzas; let ix= index;">
         <ion-card>
-
-          <img src="{{pathImgs + pizza.img}}" />
+          <div class="div-img">
+            <img class="img-produtos" src="{{pathImgs + pizza.img}}" />
+          </div>
           <ion-card-header>
             <ion-card-title>{{pizza.titulo}}</ion-card-title>
           </ion-card-header>
@@ -45,12 +46,12 @@
     <ion-row>
       <ion-col size="12" *ngFor="let burguer of burguers; let ix= index;">
         <ion-card>
-
-          <img src="{{pathImgs + burguer.img}}" />
+          <div class="div-img">
+            <img class="img-produtos" src="{{pathImgs + burguer.img}}" />
+          </div>
           <ion-card-header>
             <ion-card-title>{{burguer.titulo}}</ion-card-title>
           </ion-card-header>
-        
           <ion-card-content>
             {{burguer.descricao}}
           </ion-card-content>
@@ -70,8 +71,9 @@
     <ion-row>
       <ion-col size="12" *ngFor="let salgado of salgados; let ix= index;">
         <ion-card>
-
-          <img src="{{pathImgs + salgado.img}}" />
+          <div class="div-img">
+            <img class="img-produtos" src="{{pathImgs + salgado.img}}" />
+          </div>
           <ion-card-header>
             <ion-card-title>{{salgado.titulo}}</ion-card-title>
           </ion-card-header>
@@ -94,12 +96,12 @@
     <ion-row>
       <ion-col size="12" *ngFor="let lanche of lanches; let ix= index;">
         <ion-card>
-
-          <img src="{{pathImgs + lanche.img}}" />
+          <div class="div-img">
+            <img class="img-produtos" src="{{pathImgs + lanche.img}}" />
+          </div>
           <ion-card-header>
             <ion-card-title>{{lanche.titulo}}</ion-card-title> 
           </ion-card-header>
-        
           <ion-card-content>
             {{lanche.descricao}}
           </ion-card-content>
@@ -114,12 +116,14 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+
   <ion-grid *ngIf=" aba == 5">
     <ion-row>
       <ion-col size="12" *ngFor="let suco of sucos; let ix= index;">
         <ion-card>
-
-          <img src="{{pathImgs + suco.img}}" />
+          <div class="div-img">
+            <img class="img-produtos" src="{{pathImgs + suco.img}}" />
+          </div>
           <ion-card-header>
             <ion-card-title>{{suco.titulo}}</ion-card-title>  
           </ion-card-header>
