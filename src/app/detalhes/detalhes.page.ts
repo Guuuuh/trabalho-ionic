@@ -10,7 +10,7 @@ export class DetalhesPage implements OnInit {
 
   public pathImgs = '../../assets/img/'
 
-  public quantidade:any;
+  public quantidade = 0;
 
   constructor(private route: ActivatedRoute) {
     this.route.queryParams.subscribe(params => {
