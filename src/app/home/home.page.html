@@ -9,8 +9,10 @@
 
   <ion-row class="slides">
     <ion-slides [options]="slideOpts">
-      <ion-slide class="buttons-menu" *ngFor="let categoria of categorias; let ix = index;" (click)="trocaAba(categoria)">
-        {{categoria.nome}}
+      <ion-slide *ngFor="let categoria of categorias; let ix = index;">
+        <ion-label (click)="trocaAba(categoria)" [ngClass]="aba === categoria.id ? 'buttons-menu' : '' ">
+          {{categoria.nome}}
+        </ion-label>
       </ion-slide>
     </ion-slides>
   </ion-row>

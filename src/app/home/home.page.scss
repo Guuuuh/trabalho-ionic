@@ -43,14 +43,15 @@
   text-align: center;
 }
 
-.buttons-menu:hover {
-  border-radius: 50px;
+.buttons-menu {
+  width: 60%;
   padding: 10px;
+  margin: 10px;
+  border-radius: 50px;
   border: 2px solid whitesmoke;
 }
 
 .slides{
-  padding: 20px;
   background-color: #a467d6;
   color: white;
 }
